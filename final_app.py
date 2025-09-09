@@ -4,7 +4,6 @@ from dotenv import load_dotenv
 from utils import load_documents, split_documents, build_vectorstore, build_qa_chain
 
 load_dotenv()
-os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 
 st.set_page_config(
     page_title="🤖 RAG Portfolio Assistant",
@@ -54,4 +53,5 @@ if uploaded_files:
         st.chat_message("assistant").markdown(response)
 
 else:
+
     st.info("📂 Upload PDF documents to get started.")
