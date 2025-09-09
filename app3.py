@@ -5,7 +5,6 @@ from utils import load_documents, split_documents, build_vectorstore, build_qa_c
 
 # Load key
 load_dotenv()
-os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 
 # Page config
 st.set_page_config(page_title="Neha’s AI Chatbot", page_icon="💁‍♀️", layout="centered")
@@ -128,5 +127,6 @@ if uploaded_files:
 
 else:
     st.info("📂 Upload Neha’s resume or project PDFs to begin.")
+
 
 
